@@ -960,6 +960,494 @@
             }
         }
 
+
+        /* =====================================================================
+         * MOBILE-FIRST RESPONSIVE OVERRIDES
+         * Tối ưu riêng cho điện thoại: 320px–639px, iPhone/Android, portrait/landscape
+         * ===================================================================== */
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        button,
+        input,
+        select,
+        .opt,
+        .dot {
+            touch-action: manipulation;
+        }
+
+        img,
+        svg {
+            max-width: 100%;
+        }
+
+        @media (max-width:639px) {
+            body {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+
+            .wrap {
+                width: 100%;
+                max-width: none;
+                padding-left: max(12px, env(safe-area-inset-left));
+                padding-right: max(12px, env(safe-area-inset-right));
+            }
+
+            .hero {
+                padding-top: calc(env(safe-area-inset-top) + 24px);
+                padding-bottom: 62px;
+            }
+
+            .hero h1 {
+                font-size: clamp(26px, 9vw, 34px);
+                line-height: 1.12;
+                word-break: normal;
+            }
+
+            .hero p {
+                margin-top: 10px;
+                font-size: 14.5px;
+                line-height: 1.5;
+            }
+
+            .hero .ph {
+                margin-top: 20px;
+            }
+
+            .facts {
+                gap: 0;
+                margin-top: 20px;
+            }
+
+            .facts div {
+                min-width: 0;
+                padding-left: 10px;
+            }
+
+            .facts b {
+                font-size: clamp(23px, 7vw, 28px);
+            }
+
+            .facts span {
+                font-size: 11.5px;
+                line-height: 1.35;
+            }
+
+            .start-card {
+                margin-top: -34px;
+                margin-bottom: 24px;
+                border-radius: 16px;
+                padding: 20px 16px;
+            }
+
+            .start-card h2 {
+                font-size: 18px;
+            }
+
+            .rules {
+                font-size: 14px;
+                line-height: 1.48;
+                padding-left: 18px;
+            }
+
+            .rules li {
+                margin: 7px 0;
+            }
+
+            .field {
+                margin-top: 14px;
+            }
+
+            .field input,
+            .field select {
+                height: 52px;
+                min-height: 52px;
+                font-size: 16px;
+                /* tránh Safari tự zoom khi focus */
+                border-radius: 12px;
+            }
+
+            .btn {
+                min-height: 52px;
+                font-size: 15.5px;
+                border-radius: 12px;
+            }
+
+            /* Thanh làm bài gọn hơn và không chiếm quá nhiều chiều cao */
+            .qbar {
+                padding-top: calc(env(safe-area-inset-top) + 8px);
+                padding-bottom: 8px;
+            }
+
+            .qbar-row {
+                gap: 8px;
+            }
+
+            .qbar-count {
+                font-size: 12.5px;
+            }
+
+            .qbar-count b {
+                font-size: 15px;
+            }
+
+            .clock {
+                font-size: 23px;
+                padding: 7px 10px;
+                border-radius: 10px;
+                white-space: nowrap;
+            }
+
+            .qbar .ph {
+                margin-top: 8px;
+                height: 6px;
+            }
+
+            .qbar .ph-knob {
+                width: 16px;
+                height: 16px;
+                margin-top: -8px;
+                margin-left: -8px;
+            }
+
+            /* 10 câu thành 2 hàng x 5, nút đủ lớn để chạm bằng ngón tay */
+            .dots {
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+                gap: 6px;
+                margin-top: 9px;
+            }
+
+            .dot {
+                height: 38px;
+                min-height: 38px;
+                border-radius: 9px;
+                font-size: 12.5px;
+            }
+
+            .q {
+                margin: 10px 0;
+                padding: 15px 12px 12px;
+                border-radius: 15px;
+                scroll-margin-top: 178px;
+            }
+
+            .q-head {
+                gap: 9px;
+            }
+
+            .q-num {
+                min-width: 32px;
+                width: 32px;
+                height: 32px;
+                border-radius: 9px;
+                font-size: 13px;
+            }
+
+            .q-text {
+                font-size: 15.5px;
+                line-height: 1.42;
+                overflow-wrap: anywhere;
+            }
+
+            .q-kind {
+                margin-top: 4px;
+                font-size: 12.5px;
+            }
+
+            .opts {
+                gap: 7px;
+                margin-top: 12px;
+            }
+
+            .box {
+                min-height: 48px;
+                padding: 11px 10px;
+                gap: 10px;
+                border-radius: 11px;
+            }
+
+            .key {
+                width: 27px;
+                height: 27px;
+                font-size: 12.5px;
+            }
+
+            .txt {
+                font-size: 14.5px;
+                line-height: 1.42;
+                overflow-wrap: anywhere;
+            }
+
+            .submit-row {
+                margin: 16px 0 calc(24px + env(safe-area-inset-bottom));
+            }
+
+            .hint {
+                font-size: 12.5px;
+            }
+
+            /* Màn hình chờ */
+            .wait {
+                margin: 14px 0 24px;
+                padding: 20px 16px;
+                border-radius: 16px;
+            }
+
+            .wait h2 {
+                font-size: 19px;
+            }
+
+            .wait p.lead {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            .wait-clock {
+                margin-top: 18px;
+                font-size: clamp(46px, 18vw, 62px);
+            }
+
+            .status {
+                max-width: 100%;
+                font-size: 12.5px;
+                line-height: 1.35;
+            }
+
+            /* Màn hình kết quả */
+            .result {
+                margin-top: 12px;
+                padding: 20px 16px;
+            }
+
+            .res-top {
+                align-items: center;
+                gap: 14px;
+            }
+
+            .ring {
+                width: 94px;
+                height: 94px;
+            }
+
+            .ring-txt b {
+                font-size: 29px;
+            }
+
+            .res-top h2 {
+                font-size: 17px;
+                line-height: 1.32;
+            }
+
+            .res-top p {
+                font-size: 13.5px;
+                line-height: 1.45;
+            }
+
+            .stats {
+                gap: 0;
+                margin-top: 16px;
+                padding-top: 14px;
+            }
+
+            .stats div {
+                min-width: 0;
+                padding-left: 8px;
+                text-align: center;
+            }
+
+            .stats b {
+                font-size: 19px;
+            }
+
+            .stats span {
+                display: block;
+                margin-top: 2px;
+                font-size: 11.5px;
+                line-height: 1.25;
+            }
+
+            .review-head {
+                align-items: stretch;
+                gap: 8px;
+                margin-top: 18px;
+            }
+
+            .review-head h2 {
+                width: 100%;
+                font-size: 17px;
+            }
+
+            .seg {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .seg button {
+                width: 100%;
+                min-height: 42px;
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+
+            .q.review .q-head {
+                flex-wrap: wrap;
+            }
+
+            .q.review .q-head>div {
+                flex: 1 1 calc(100% - 44px);
+                min-width: 0;
+            }
+
+            .q-score {
+                margin-left: 41px;
+                margin-top: -2px;
+                font-size: 12px;
+            }
+
+            .tag,
+            .q-note {
+                font-size: 12.5px;
+            }
+
+            /* Modal theo kiểu bottom-sheet trên mobile, dễ thao tác một tay */
+            .modal {
+                place-items: end center;
+                padding: 0;
+            }
+
+            .modal-card {
+                max-width: none;
+                border-radius: 18px 18px 0 0;
+                padding: 20px 16px calc(16px + env(safe-area-inset-bottom));
+                box-shadow: 0 -18px 50px rgba(0, 0, 0, .22);
+            }
+
+            .modal-card h3 {
+                font-size: 18px;
+            }
+
+            .modal-card p {
+                font-size: 14px;
+            }
+
+            .modal-actions {
+                gap: 8px;
+                margin-top: 16px;
+            }
+
+            .modal-actions .btn {
+                min-height: 50px;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .foot {
+                padding-bottom: calc(28px + env(safe-area-inset-bottom));
+            }
+        }
+
+        @media (max-width:420px) {
+            .wrap {
+                padding-left: max(10px, env(safe-area-inset-left));
+                padding-right: max(10px, env(safe-area-inset-right));
+            }
+
+            .hero h1 {
+                font-size: clamp(25px, 8.7vw, 31px);
+            }
+
+            .facts div {
+                padding-left: 8px;
+            }
+
+            .facts span {
+                font-size: 10.8px;
+            }
+
+            .q {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .box {
+                padding-left: 9px;
+                padding-right: 9px;
+            }
+
+            .txt {
+                font-size: 14px;
+            }
+
+            .res-top {
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width:350px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .facts {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .facts b {
+                font-size: 22px;
+            }
+
+            .clock {
+                font-size: 21px;
+            }
+
+            .dot {
+                height: 36px;
+                min-height: 36px;
+            }
+
+            .res-top {
+                flex-direction: column;
+            }
+
+            .stats b {
+                font-size: 17px;
+            }
+
+            .stats span {
+                font-size: 10.8px;
+            }
+
+            .modal-actions {
+                flex-direction: column-reverse;
+            }
+
+            .modal-actions .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-height:500px) and (orientation:landscape) {
+            .qbar {
+                position: relative;
+            }
+
+            .q {
+                scroll-margin-top: 12px;
+            }
+
+            .hero {
+                padding-top: calc(env(safe-area-inset-top) + 16px);
+                padding-bottom: 52px;
+            }
+        }
+
         @media (prefers-reduced-motion:reduce) {
 
             *,
